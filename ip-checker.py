@@ -13,15 +13,7 @@ def submit_addr():
 
 def make_octets(submit):
     '''Function which parses the submit string into a list of octets'''
-    octets = [""]
-    index = 0
-    for char in submit:
-        if char == ".":
-            octets.append("")
-            index += 1
-        else:
-            octets[index]+= char
-    return octets
+    return submit.split(".")
 
 def num_of_octets(octets):
     '''Function which counts the number of octets'''
