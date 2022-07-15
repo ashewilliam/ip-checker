@@ -1,8 +1,18 @@
+#!/bin/bash
+'''
+This script checks IPv4 Address validity.
+By William Ashe
+7/15/2022
+'''
+
+
 def submit_addr():
+    '''Function that accepts user input of IPv4 address'''
     submit = input("Enter IP Address (Type x to End):  ")
     return submit
 
 def make_octets(submit):
+    '''Function which parses the submit string into a list of octets'''
     octets = [""]
     index = 0
     for char in submit:
@@ -14,11 +24,11 @@ def make_octets(submit):
     return octets
 
 def num_of_octets(octets):
+    '''Function which counts the number of octets'''
     number_of_octets = len(octets)
     return number_of_octets
 
 def check_ip_addr():
-    valid = True # innocent until proven guilty...
     submit = submit_addr()
     octets = make_octets(submit)
     octet_count = num_of_octets(octets)
