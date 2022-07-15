@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env python3
 '''
 This script checks IPv4 Address validity.
 By William Ashe
